@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080811" />
+  <title>75 ONTOP | Trang cá nhân</title>
+  <style>
+    :root {
+      --bg: #080811;
+      --panel: rgba(18, 20, 38, .88);
+      --cyan: #00e5ff;
+      --blue: #287bff;
+      --purple: #b43cff;
+      --green: #00e6a8;
+      --text: #f7f8ff;
+      --muted: #aeb4d0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; padding: 28px 16px;
+      display: grid; place-items: center;
+      color: var(--text); font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(0,229,255,.14), transparent 28rem),
+        radial-gradient(circle at 90% 85%, rgba(180,60,255,.16), transparent 30rem),
+        var(--bg);
+    }
+    .profile {
+      width: min(100%, 440px); position: relative; overflow: hidden;
+      padding: 30px 22px 24px; border-radius: 28px;
+      background: linear-gradient(145deg, rgba(20,24,45,.96), rgba(7,8,18,.98));
+      border: 1px solid rgba(0,229,255,.55);
+      box-shadow: 0 0 28px rgba(0,229,255,.13), 0 0 55px rgba(180,60,255,.12);
+    }
+    .profile::before {
+      content: ""; position: absolute; inset: -2px; pointer-events: none;
+      background: linear-gradient(125deg, transparent 15%, rgba(0,229,255,.08), transparent 48%, rgba(180,60,255,.1));
+    }
+    .content { position: relative; }
+    .avatar {
+      width: 112px; height: 112px; margin: 0 auto 16px; border-radius: 50%;
+      display: grid; place-items: center; text-align: center;
+      border: 2px solid var(--cyan);
+      background: linear-gradient(135deg, #11172b, #24103c);
+      box-shadow: 0 0 22px rgba(0,229,255,.22), inset 0 0 20px rgba(180,60,255,.14);
+    }
+    .avatar strong { font-size: 36px; letter-spacing: -2px; line-height: 1; }
+    .avatar span { display: block; color: var(--cyan); font-size: 12px; letter-spacing: 3px; margin-top: 6px; }
+    h1 { margin: 0; text-align: center; font-size: 29px; letter-spacing: 2px; }
+    .tagline { margin: 8px 0 24px; color: var(--muted); text-align: center; font-size: 14px; }
+    .links { display: grid; gap: 12px; }
+    .link {
+      display: flex; align-items: center; gap: 13px; padding: 14px;
+      text-decoration: none; color: var(--text); border-radius: 17px;
+      background: rgba(7,10,22,.72); border: 1px solid rgba(255,255,255,.1);
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+    .link:hover, .link:focus-visible { transform: translateY(-2px); outline: none; border-color: var(--cyan); box-shadow: 0 0 18px rgba(0,229,255,.12); }
+    .icon {
+      flex: 0 0 48px; height: 48px; border-radius: 14px; display: grid; place-items: center;
+      font-size: 23px; font-weight: 800; background: rgba(255,255,255,.06);
+    }
+    .tiktok .icon { border: 1px solid var(--purple); }
+    .zalo .icon { border: 1px solid var(--blue); color: #75b8ff; font-size: 16px; }
+    .pay .icon { border: 1px solid var(--green); color: var(--green); font-size: 16px; }
+    .details { min-width: 0; flex: 1; }
+    .label { display: block; color: var(--muted); font-size: 12px; margin-bottom: 3px; }
+    .value { display: block; font-size: 16px; font-weight: 750; overflow-wrap: anywhere; }
+    .arrow { color: var(--cyan); font-size: 22px; }
+    .footer { margin: 23px 0 0; text-align: center; color: var(--muted); font-size: 12px; letter-spacing: 1.4px; }
+    .footer b { color: var(--cyan); }
+    .copy-note { min-height: 18px; margin-top: 10px; text-align: center; font-size: 12px; color: var(--green); }
+    @media (max-width: 360px) {
+      .profile { padding: 24px 15px 20px; }
+      .value { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="profile">
+    <div class="content">
+      <div class="avatar" aria-label="Logo 75 ONTOP">
+        <div><strong>75</strong><span>ONTOP__</span></div>
+      </div>
+      <h1>75 ONTOP</h1>
+      <p class="tagline">✨ Kết nối cùng bạn ✨</p>
+
+      <nav class="links" aria-label="Liên kết cá nhân">
+        <a class="link tiktok" href="https://www.tiktok.com/@75ontop__" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true">♪</span>
+          <span class="details"><span class="label">TikTok</span><span class="value">@75ontop__</span></span>
+          <span class="arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="link zalo" href="https://zalo.me/0793089475" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true">Zalo</span>
+          <span class="details"><span class="label">Nhắn tin Zalo</span><span class="value">0793089475</span></span>
+          <span class="arrow" aria-hidden="true">›</span>
+        </a>
+        <a class="link pay" href="https://zalopay.vn/" target="_blank" rel="noopener noreferrer">
+          <span class="icon" aria-hidden="true">ZPay</span>
+          <span class="details"><span class="label">ZaloPay · Số liên hệ</span><span class="value">0914482121</span></span>
+          <span class="arrow" aria-hidden="true">›</span>
+        </a>
+      </nav>
+
+      <p class="footer"><b>75 ONTOP</b> · FOLLOW & KẾT NỐI</p>
+      <div class="copy-note" id="copyNote" aria-live="polite"></div>
+    </div>
+  </main>
+</body>
+</html>
